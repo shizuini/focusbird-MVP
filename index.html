@@ -1,128 +1,331 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Focus Bird MVP</title>
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Focus Bird MVP</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
+
 <div class="app">
 
-    <!-- 首页 -->
-    <section id="home" class="page active">
-        <h1>🐦 Focus Bird</h1>
-        <p class="subtitle">让专注成为一次成长旅程</p>
 
-        <div class="bird">
-            🐦
-            <p>小鸟正在等待你的任务</p>
-        </div>
+<!-- 首页 -->
 
-        <h3>今天想完成什么？</h3>
-
-        <input id="taskInput" 
-        placeholder="例如：完成营销科技体验报告">
-
-        <p>系统推荐专注时间：</p>
-        <div class="time">
-            40分钟
-        </div>
-
-        <button onclick="startFocus()">
-            开始专注
-        </button>
-
-    </section>
+<div id="home" class="page active">
 
 
-    <!-- 专注页面 -->
-    <section id="focus" class="page">
+<h1>Focus Bird</h1>
 
-        <h1>正在专注</h1>
-
-        <div class="task">
-            <h3 id="showTask"></h3>
-        </div>
+<p class="subtitle">
+让专注成为一次陪伴式成长旅程
+</p>
 
 
-        <div class="bird big">
-            🐦
-            <p>小鸟正在准备旅行...</p>
-        </div>
+<div class="bird">
+
+<div class="big">
+🐦
+</div>
+
+<p>
+小鸟正在等待你的下一次旅行
+</p>
+
+</div>
 
 
-        <div id="timer">
-            40:00
-        </div>
+
+<div class="task">
 
 
-        <button onclick="finishFocus()">
-            完成任务
-        </button>
-
-    </section>
+<h3>
+创建专注任务
+</h3>
 
 
-    <!-- 反馈页面 -->
-    <section id="feedback" class="page">
-
-        <h1>任务反馈</h1>
-
-        <p>本次任务完成情况：</p>
-
-        <button onclick="getReward()">
-            已完成
-        </button>
-
-        <button onclick="getReward()">
-            部分完成
-        </button>
-
-        <button onclick="getReward()">
-            未完成
-        </button>
-
-    </section>
+<input 
+id="taskInput"
+placeholder="例如：完成营销科技体验创新报告">
 
 
-    <!-- 奖励页面 -->
-    <section id="reward" class="page">
-
-        <h1>🎒 小鸟旅行完成</h1>
-
-        <div class="bird big">
-            🐦
-        </div>
-
-        <p>
-            小鸟带回了：
-        </p>
-
-        <h2>
-            🌿 森林旅行纪念品
-        </h2>
+<p>
+选择专注时间
+</p>
 
 
-        <p>
-            今日成长记录：
-        </p>
+<button onclick="setTime(25)">
+25分钟
+</button>
 
-        <p>
-            完成任务：1次<br>
-            小鸟旅行：1次
-        </p>
 
-    </section>
+<button onclick="setTime(40)">
+40分钟
+</button>
+
+
+<button onclick="setTime(60)">
+60分钟
+</button>
+
+
+<p id="selectedTime">
+当前选择：40分钟
+</p>
+
+
+
+<button onclick="startFocus()">
+开始专注
+</button>
 
 
 </div>
 
 
+</div>
+
+
+
+
+
+<!-- 专注页面 -->
+
+
+<div id="focus" class="page">
+
+
+<h1>
+小鸟正在旅行
+</h1>
+
+
+<div class="bird">
+
+
+<div class="big">
+🐦
+</div>
+
+
+<p id="birdStatus">
+小鸟正在出发...
+</p>
+
+
+</div>
+
+
+
+<div class="task">
+
+
+<p>
+当前任务：
+</p>
+
+
+<h3 id="showTask">
+</h3>
+
+
+</div>
+
+
+
+<div id="timer">
+40:00
+</div>
+
+
+
+<button onclick="finishFocus()">
+提前完成
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- 反馈页面 -->
+
+
+<div id="feedback" class="page">
+
+
+<h1>
+本次专注反馈
+</h1>
+
+
+<div class="task">
+
+
+<p>
+任务推进情况：
+</p>
+
+
+<button>
+完成
+</button>
+
+
+<button>
+部分完成
+</button>
+
+
+<button>
+未完成
+</button>
+
+
+
+
+<p>
+专注状态：
+</p>
+
+
+<button>
+高度集中
+</button>
+
+
+<button>
+一般
+</button>
+
+
+<button>
+容易分心
+</button>
+
+
+
+<p>
+体验感受：
+</p>
+
+
+<button>
+愉快
+</button>
+
+
+<button>
+普通
+</button>
+
+
+<button>
+压力较大
+</button>
+
+
+</div>
+
+
+
+<button onclick="getReward()">
+查看小鸟旅行结果
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- 奖励页面 -->
+
+
+<div id="reward" class="page">
+
+
+<h1>
+旅行完成
+</h1>
+
+
+<div class="bird">
+
+
+<div class="big">
+🐦
+</div>
+
+
+<p>
+小鸟带回了旅行纪念品
+</p>
+
+
+</div>
+
+
+
+<div class="task">
+
+
+<p>
+获得奖励：</p>
+
+
+<p>
+🌾 大麦草 ×1
+</p>
+
+
+<p>
+🎒 旅行照片 ×1
+</p>
+
+
+<p>
+⭐ 成长经验 +10
+</p>
+
+
+
+</div>
+
+
+
+<button onclick="changePage('reward','home')">
+返回首页
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+
 <script src="script.js"></script>
 
+
 </body>
+
+
 </html>
-<!-- update -->
