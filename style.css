@@ -1,46 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+
 body {
 
     margin: 0;
 
-    padding: 0;
+    min-height: 100vh;
 
     font-family: "Microsoft YaHei", sans-serif;
 
-    background: linear-gradient(#dff3d8,#f8f3df);
-
-    min-height:100vh;
-
-}
-
-
-
-.app {
-
-    width:90%;
-
-    max-width:900px;
-
-    margin:auto;
-
-    padding:50px 20px;
+    background: linear-gradient(
+        180deg,
+        #dff3d8,
+        #f8f3df
+    );
 
 }
 
 
+.container {
 
-.page {
+    width: 90%;
 
-    display:none;
+    max-width: 1000px;
 
-    text-align:center;
+    margin: 0 auto;
 
-}
+    padding: 60px 20px;
 
-
-
-.page.active {
-
-    display:block;
+    text-align: center;
 
 }
 
@@ -48,27 +38,20 @@ body {
 
 h1 {
 
-    font-size:42px;
+    font-size: 52px;
 
-    color:#356b3a;
+    color: #356b3a;
 
-}
-
-
-
-h2 {
-
-    color:#356b3a;
+    margin-bottom: 10px;
 
 }
-
 
 
 .subtitle {
 
-    font-size:18px;
+    font-size: 22px;
 
-    color:#777;
+    color: #666;
 
 }
 
@@ -76,37 +59,35 @@ h2 {
 
 
 
-/* 小鸟区域 */
+/* 小鸟卡片 */
+
+.bird-card {
+
+    width: 85%;
+
+    margin: 40px auto;
+
+    background: rgba(255,255,255,0.8);
+
+    border-radius: 40px;
+
+    padding: 50px;
+
+}
+
 
 .bird {
 
-    background:rgba(255,255,255,0.8);
-
-    border-radius:35px;
-
-    padding:40px;
-
-    margin:35px auto;
-
-    width:80%;
+    font-size: 130px;
 
 }
 
 
+.bird-card p {
 
-.big {
+    font-size: 24px;
 
-    font-size:100px;
-
-}
-
-
-
-.bird p {
-
-    font-size:20px;
-
-    color:#666;
+    color:#555;
 
 }
 
@@ -115,85 +96,49 @@ h2 {
 
 
 
-/* 任务输入 */
+/* 任务区域 */
 
-.task {
+.task-card {
+
+    width:85%;
+
+    margin:40px auto;
+
+    padding:45px;
 
     background:white;
 
-    border-radius:30px;
+    border-radius:40px;
 
-    padding:35px;
+}
 
-    margin:30px auto;
 
-    width:80%;
+.task-card h2 {
+
+    font-size:32px;
+
+    color:#356b3a;
 
 }
 
 
 
-input {
-
-    width:80%;
-
-    padding:18px;
-
-    border-radius:20px;
-
-    border:1px solid #ddd;
-
-    font-size:18px;
-
-}
+.task-input {
 
 
+    width:85%;
 
 
-
-
-/* 横向时间滚轮 */
-
-.time-picker {
-
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:25px;
-
-    margin:30px auto;
-
-}
-
-
-
-.time-option {
-
-
-    width:70px;
-
-    height:70px;
-
-    border-radius:50%;
-
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-
-    background:#eeeeee;
+    padding:22px;
 
 
     font-size:22px;
 
-    color:#777;
+
+    border-radius:25px;
+
+
+    border:1px solid #ddd;
 
 
 }
@@ -201,24 +146,59 @@ input {
 
 
 
-.active-time {
 
 
-    width:95px;
 
-    height:95px;
+/* 时间选择 */
 
-
-    background:#6da85b;
+.time-box {
 
 
-    color:white;
+    margin:30px;
 
 
-    font-size:30px;
+    font-size:25px;
 
 
-    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+#timeShow {
+
+
+    color:#6da85b;
+
+
+    font-size:40px;
+
+
+}
+
+
+
+
+
+.time-slider {
+
+
+    width:80%;
+
+    margin:40px auto;
+
+}
+
+
+
+input[type="range"] {
+
+
+    width:100%;
+
+    height:12px;
+
+
+    accent-color:#6da85b;
+
 
 }
 
@@ -239,51 +219,25 @@ button {
     border:none;
 
 
-    padding:18px 45px;
+    padding:22px 60px;
 
 
-    border-radius:40px;
+    font-size:24px;
 
 
-    font-size:20px;
+    border-radius:50px;
 
 
     cursor:pointer;
 
 
-    margin:15px;
-
-
 }
-
-
 
 
 button:hover {
 
+
     background:#568b46;
 
-}
-
-
-
-
-
-
-/* 倒计时 */
-
-#timer {
-
-
-    font-size:70px;
-
-
-    color:#356b3a;
-
-
-    margin:40px;
-
 
 }
-
-
