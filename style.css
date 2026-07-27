@@ -1,61 +1,133 @@
 body {
+
     margin: 0;
+
     padding: 0;
+
     font-family: "Microsoft YaHei", sans-serif;
-    background: linear-gradient(#dff3d8, #f7f3df);
-    min-height: 100vh;
+
+    background: linear-gradient(#dff3d8,#f8f3df);
+
+    min-height:100vh;
+
 }
+
 
 
 .app {
-    width: 90%;
-    max-width: 900px;
-    margin: auto;
-    padding: 50px 30px;
+
+    width:90%;
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:50px 20px;
+
 }
+
 
 
 .page {
-    display: none;
-    text-align: center;
+
+    display:none;
+
+    text-align:center;
+
 }
+
 
 
 .page.active {
-    display: block;
+
+    display:block;
+
 }
+
 
 
 h1 {
-    color: #356b3a;
-    margin-bottom: 10px;
+
+    font-size:42px;
+
+    color:#356b3a;
+
 }
+
+
+
+h2 {
+
+    color:#356b3a;
+
+}
+
 
 
 .subtitle {
-    color: #777;
+
+    font-size:18px;
+
+    color:#777;
+
 }
 
+
+
+
+
+/* 小鸟区域 */
 
 .bird {
-    background: rgba(255,255,255,0.7);
-    border-radius:30px;
+
+    background:rgba(255,255,255,0.8);
+
+    border-radius:35px;
+
     padding:40px;
-    margin:30px auto;
-}
 
+    margin:35px auto;
 
-.bird p {
-
-    font-size: 16px;
-    color: #555;
+    width:80%;
 
 }
+
 
 
 .big {
 
-    font-size: 80px;
+    font-size:100px;
+
+}
+
+
+
+.bird p {
+
+    font-size:20px;
+
+    color:#666;
+
+}
+
+
+
+
+
+
+/* 任务输入 */
+
+.task {
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:35px;
+
+    margin:30px auto;
+
+    width:80%;
 
 }
 
@@ -63,57 +135,128 @@ h1 {
 
 input {
 
-    width: 90%;
-    padding: 15px;
+    width:80%;
 
-    border-radius: 15px;
+    padding:18px;
 
-    border: none;
+    border-radius:20px;
 
-    font-size: 16px;
+    border:1px solid #ddd;
 
-    margin: 15px 0;
+    font-size:18px;
+
+}
+
+
+
+
+
+
+/* 横向时间滚轮 */
+
+.time-picker {
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin:30px auto;
 
 }
 
 
-.time {
 
-    background: #ffffff;
+.time-option {
 
-    display: inline-block;
 
-    padding: 15px 30px;
+    width:70px;
 
-    border-radius: 30px;
+    height:70px;
 
-    color:#356b3a;
+    border-radius:50%;
 
-    font-size: 22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    background:#eeeeee;
+
+
+    font-size:22px;
+
+    color:#777;
+
 
 }
+
+
+
+
+.active-time {
+
+
+    width:95px;
+
+    height:95px;
+
+
+    background:#6da85b;
+
+
+    color:white;
+
+
+    font-size:30px;
+
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+}
+
+
+
 
 
 
 button {
 
+
     background:#6da85b;
+
 
     color:white;
 
+
     border:none;
 
-    padding:15px 30px;
 
-    border-radius:30px;
+    padding:18px 45px;
 
-    font-size:16px;
 
-    margin:10px;
+    border-radius:40px;
+
+
+    font-size:20px;
+
 
     cursor:pointer;
 
+
+    margin:15px;
+
+
 }
+
+
 
 
 button:hover {
@@ -123,26 +266,24 @@ button:hover {
 }
 
 
-.task {
-
-    background:white;
-
-    padding:20px;
-
-    border-radius:20px;
-
-    margin:20px 0;
-
-}
 
 
+
+
+/* 倒计时 */
 
 #timer {
 
-    font-size:50px;
+
+    font-size:70px;
+
 
     color:#356b3a;
 
-    margin:30px;
+
+    margin:40px;
+
 
 }
+
+
