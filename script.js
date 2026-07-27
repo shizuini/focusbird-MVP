@@ -1,9 +1,9 @@
 let focusMinutes = 40;
-let timer;
 let remainingSeconds;
+let timer;
 
 
-// 时间滑动选择
+// 时间选择
 
 const timeRange = document.getElementById("timeRange");
 const timeShow = document.getElementById("timeShow");
@@ -11,7 +11,7 @@ const timeShow = document.getElementById("timeShow");
 
 timeRange.addEventListener("input", function(){
 
-    focusMinutes = this.value;
+    focusMinutes = Number(this.value);
 
     timeShow.innerHTML = focusMinutes + "分钟";
 
@@ -28,71 +28,74 @@ function startFocus(){
 
 
     if(task === ""){
-
         task = "完成一个专注任务";
-
     }
 
 
     remainingSeconds = focusMinutes * 60;
 
 
+
     document.querySelector(".container").innerHTML = `
 
-        <h1>小鸟正在旅行</h1>
+    <h1>
+    🐦 小鸟正在行动
+    </h1>
 
 
-        <div class="bird-card">
+    <div class="bird-card">
 
-            <div class="bird">
-                🐦
-            </div>
-
-            <p>
-            小鸟正在陪伴你完成任务
-            </p>
-
+        <div class="bird">
+        🐦
         </div>
 
 
-        <div class="task-card">
-
-            <h2>
-            当前任务
-            </h2>
-
-            <p>
-            ${task}
-            </p>
+        <p>
+        小鸟正在陪伴你完成任务
+        </p>
 
 
-            <div id="timer">
-            </div>
+    </div>
 
 
-            <button onclick="finishFocus()">
-            完成专注
-            </button>
+
+    <div class="task-card">
+
+        <h2>
+        当前任务
+        </h2>
 
 
+        <p>
+        ${task}
+        </p>
+
+
+        <div id="timer">
         </div>
 
+
+        <p>
+        专注过程中，小鸟正在积累旅行能量...
+        </p>
+
+
+    </div>
 
     `;
 
 
+
     updateTimer();
 
-
     timer = setInterval(updateTimer,1000);
-
 
 }
 
 
 
 
-// 更新时间显示
+// 倒计时
 
 function updateTimer(){
 
@@ -121,7 +124,7 @@ function updateTimer(){
 
         clearInterval(timer);
 
-        finishFocus();
+        showReward();
 
         return;
 
@@ -130,18 +133,64 @@ function updateTimer(){
 
     remainingSeconds--;
 
-
 }
 
 
 
 
-// 完成专注
 
-function finishFocus(){
+// 根据时间生成奖励
+
+function showReward(){
 
 
-    clearInterval(timer);
+    let rewardText;
+
+
+    let birdAction;
+
+
+
+    if(focusMinutes <=20){
+
+
+        birdAction =
+        "小鸟在庭院里休息，并收集植物";
+
+
+        rewardText =
+        "🌱 获得猫草 ×20<br>🌿 获得大麦草 ×20";
+
+
+    }
+
+
+    else if(focusMinutes <=40){
+
+
+        birdAction =
+        "小鸟完成了一次附近探索";
+
+
+        rewardText =
+        "🍪 获得小鸟零食<br>🧸 获得旅行玩具";
+
+
+    }
+
+
+    else{
+
+
+        birdAction =
+        "小鸟完成了一次远方旅行";
+
+
+        rewardText =
+        "🎒 获得旅行纪念品<br>📷 获得旅行照片";
+
+
+    }
 
 
 
@@ -156,14 +205,13 @@ function finishFocus(){
 
     <div class="bird-card">
 
-
         <div class="bird">
         🐦
         </div>
 
 
         <p>
-        小鸟完成了一次旅行
+        ${birdAction}
         </p>
 
 
@@ -171,32 +219,18 @@ function finishFocus(){
 
 
 
+
     <div class="task-card">
 
 
-    <h2>
-    本次任务反馈
-    </h2>
+        <h2>
+        小鸟带回了：
+        </h2>
 
 
-    <p>
-    任务推进程度
-    </p>
-
-
-    <button>
-    已完成
-    </button>
-
-
-    <button>
-    部分完成
-    </button>
-
-
-    <button>
-    未完成
-    </button>
+        <p>
+        ${rewardText}
+        </p>
 
 
 
