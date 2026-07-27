@@ -1,1 +1,152 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei", sans-serif;
+    background: linear-gradient(#dff3d8, #f7f3df);
+    min-height: 100vh;
+}
 
+
+.app {
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+
+.page {
+    display: none;
+    text-align: center;
+}
+
+
+.page.active {
+    display: block;
+}
+
+
+h1 {
+    color: #356b3a;
+    margin-bottom: 10px;
+}
+
+
+.subtitle {
+    color: #777;
+}
+
+
+.bird {
+
+    background: rgba(255,255,255,0.7);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 25px 0;
+
+    font-size: 50px;
+
+}
+
+
+.bird p {
+
+    font-size: 16px;
+    color: #555;
+
+}
+
+
+.big {
+
+    font-size: 80px;
+
+}
+
+
+
+input {
+
+    width: 90%;
+    padding: 15px;
+
+    border-radius: 15px;
+
+    border: none;
+
+    font-size: 16px;
+
+    margin: 15px 0;
+
+}
+
+
+.time {
+
+    background: #ffffff;
+
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    border-radius: 30px;
+
+    color:#356b3a;
+
+    font-size: 22px;
+
+}
+
+
+
+button {
+
+    background:#6da85b;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 30px;
+
+    border-radius:30px;
+
+    font-size:16px;
+
+    margin:10px;
+
+    cursor:pointer;
+
+}
+
+
+button:hover {
+
+    background:#568b46;
+
+}
+
+
+.task {
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    margin:20px 0;
+
+}
+
+
+
+#timer {
+
+    font-size:50px;
+
+    color:#356b3a;
+
+    margin:30px;
+
+}
