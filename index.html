@@ -1,368 +1,67 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Focus Bird MVP</title>
-
 <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
+<div class="container">
 
-<div class="app">
-
-
-<!-- 首页 -->
-
-<div id="home" class="page active">
+    <h1>Focus Bird</h1>
+    <p class="subtitle">让专注成为一次陪伴式成长旅程</p>
 
 
-<h1>Focus Bird</h1>
-
-<p class="subtitle">
-让专注成为一次陪伴式成长旅程
-</p>
-
+    <div class="bird-card">
+        <div class="bird">🐦</div>
+        <p>小鸟正在等待你的下一次旅行</p>
+    </div>
 
 
-<!-- 小鸟陪伴区域 -->
+    <div class="task-card">
 
-<div class="bird">
+        <h2>创建专注任务</h2>
 
-<div class="big">
-🐦
-</div>
-
-<p>
-小鸟正在等待你的下一次旅行
-</p>
-
-</div>
+        <input 
+        class="task-input"
+        placeholder="请输入你的任务，例如：完成营销科技创新报告">
 
 
+        <h3>选择专注时间</h3>
 
-<!-- 创建任务 -->
-
-<div class="task">
-
-
-<h2>
-创建专注任务
-</h2>
+        <div class="time-box">
+            <span>当前选择：</span>
+            <strong id="timeShow">40分钟</strong>
+        </div>
 
 
-<input 
-id="taskInput"
-placeholder="请输入你的任务目标，例如：完成期末报告">
+        <div class="time-slider">
+
+            <input 
+            type="range"
+            min="1"
+            max="60"
+            value="40"
+            id="timeRange">
+
+        </div>
 
 
-</div>
+        <button onclick="startFocus()">
+            开始专注
+        </button>
 
 
-
-
-<!-- 横向时间滚轮 -->
-
-
-<div class="task">
-
-
-<h2>
-选择专注时间
-</h2>
-
-
-<div class="time-picker">
-
-
-<div class="time-option">
-35
-</div>
-
-
-<div class="time-option">
-38
-</div>
-
-
-<div class="time-option active-time">
-40
-</div>
-
-
-<div class="time-option">
-42
-</div>
-
-
-<div class="time-option">
-45
-</div>
+    </div>
 
 
 </div>
-
-
-<p>
-当前选择：
-<span id="selectedTime">
-40
-</span>
-分钟
-</p>
-
-
-
-</div>
-
-
-
-
-
-
-<button onclick="startFocus()">
-
-开始专注
-
-</button>
-
-
-
-
-</div>
-
-
-
-
-
-
-
-<!-- 专注页面 -->
-
-
-<div id="focus" class="page">
-
-
-<h1>
-小鸟正在旅行
-</h1>
-
-
-
-<div class="bird">
-
-
-<div class="big">
-🐦
-</div>
-
-
-<p id="birdStatus">
-小鸟正在出发...
-</p>
-
-
-</div>
-
-
-
-
-<div class="task">
-
-
-<h3>
-当前任务
-</h3>
-
-
-<p id="showTask">
-
-</p>
-
-
-</div>
-
-
-
-<div id="timer">
-
-40:00
-
-</div>
-
-
-
-<button onclick="finishFocus()">
-
-完成任务
-
-</button>
-
-
-
-</div>
-
-
-
-
-
-
-<!-- 反馈页面 -->
-
-
-<div id="feedback" class="page">
-
-
-<h1>
-专注反馈
-</h1>
-
-
-<div class="task">
-
-
-<p>
-任务推进情况
-</p>
-
-
-<button>
-完成
-</button>
-
-
-<button>
-部分完成
-</button>
-
-
-<button>
-未完成
-</button>
-
-
-
-<p>
-专注状态
-</p>
-
-
-<button>
-高度集中
-</button>
-
-
-<button>
-一般
-</button>
-
-
-<button>
-容易分心
-</button>
-
-
-
-</div>
-
-
-
-<button onclick="getReward()">
-
-查看小鸟旅行结果
-
-</button>
-
-
-</div>
-
-
-
-
-
-
-
-
-<!-- 奖励页面 -->
-
-
-<div id="reward" class="page">
-
-
-<h1>
-小鸟旅行归来
-</h1>
-
-
-<div class="bird">
-
-<div class="big">
-🐦
-</div>
-
-
-<p>
-小鸟带回了旅行纪念品
-</p>
-
-
-</div>
-
-
-
-
-<div class="task">
-
-<p>
-获得奖励：
-</p>
-
-<p>
-🌾 大麦草
-</p>
-
-<p>
-🎒 旅行照片
-</p>
-
-<p>
-⭐ 成长经验
-</p>
-
-
-</div>
-
-
-
-<button onclick="changePage('reward','home')">
-
-返回首页
-
-</button>
-
-
-</div>
-
-
-
-
-
-</div>
-
 
 
 <script src="script.js"></script>
 
-
 </body>
-
-
 </html>
