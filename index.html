@@ -1,1 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Bird MVP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<div class="app">
+
+    <!-- 首页 -->
+    <section id="home" class="page active">
+        <h1>🐦 Focus Bird</h1>
+        <p class="subtitle">让专注成为一次成长旅程</p>
+
+        <div class="bird">
+            🐦
+            <p>小鸟正在等待你的任务</p>
+        </div>
+
+        <h3>今天想完成什么？</h3>
+
+        <input id="taskInput" 
+        placeholder="例如：完成营销科技体验报告">
+
+        <p>系统推荐专注时间：</p>
+        <div class="time">
+            40分钟
+        </div>
+
+        <button onclick="startFocus()">
+            开始专注
+        </button>
+
+    </section>
+
+
+    <!-- 专注页面 -->
+    <section id="focus" class="page">
+
+        <h1>正在专注</h1>
+
+        <div class="task">
+            <h3 id="showTask"></h3>
+        </div>
+
+
+        <div class="bird big">
+            🐦
+            <p>小鸟正在准备旅行...</p>
+        </div>
+
+
+        <div id="timer">
+            40:00
+        </div>
+
+
+        <button onclick="finishFocus()">
+            完成任务
+        </button>
+
+    </section>
+
+
+    <!-- 反馈页面 -->
+    <section id="feedback" class="page">
+
+        <h1>任务反馈</h1>
+
+        <p>本次任务完成情况：</p>
+
+        <button onclick="getReward()">
+            已完成
+        </button>
+
+        <button onclick="getReward()">
+            部分完成
+        </button>
+
+        <button onclick="getReward()">
+            未完成
+        </button>
+
+    </section>
+
+
+    <!-- 奖励页面 -->
+    <section id="reward" class="page">
+
+        <h1>🎒 小鸟旅行完成</h1>
+
+        <div class="bird big">
+            🐦
+        </div>
+
+        <p>
+            小鸟带回了：
+        </p>
+
+        <h2>
+            🌿 森林旅行纪念品
+        </h2>
+
+
+        <p>
+            今日成长记录：
+        </p>
+
+        <p>
+            完成任务：1次<br>
+            小鸟旅行：1次
+        </p>
+
+    </section>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
