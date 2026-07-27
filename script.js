@@ -79,7 +79,16 @@ function changePage(oldPage,newPage){
 
     document.getElementById(oldPage)
     .classList.remove("active");
+let feedback=[];
 
+
+function selectFeedback(value){
+
+    feedback.push(value);
+
+    console.log(feedback);
+
+}
 
     document.getElementById(newPage)
     .classList.add("active");
