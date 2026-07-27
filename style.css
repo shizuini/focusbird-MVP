@@ -8,10 +8,10 @@ body {
 
 
 .app {
-    width: 100%;
-    max-width: 420px;
+    width: 90%;
+    max-width: 900px;
     margin: auto;
-    padding: 30px 20px;
+    padding: 50px 30px;
 }
 
 
@@ -38,14 +38,10 @@ h1 {
 
 
 .bird {
-
     background: rgba(255,255,255,0.7);
-    border-radius: 20px;
-    padding: 25px;
-    margin: 25px 0;
-
-    font-size: 50px;
-
+    border-radius:30px;
+    padding:40px;
+    margin:30px auto;
 }
 
 
